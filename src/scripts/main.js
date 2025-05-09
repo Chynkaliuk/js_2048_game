@@ -1,4 +1,3 @@
-// src/scripts/main.js
 'use strict';
 
 import Game from '../modules/Game.class.js';
@@ -19,9 +18,7 @@ for (let i = 0; i < flatCellList.length; i++) {
   const r = Math.floor(i / boardSizeForCells);
   const c = i % boardSizeForCells;
 
-  // Перевірка, щоб уникнути помилок, якщо HTML неправильний
   if (r < boardSizeForCells && c < boardSizeForCells) {
-    // Ініціалізація підмасиву, якщо він ще не існує
     if (!boardCellElements[r]) {
       boardCellElements[r] = [];
     }
@@ -40,7 +37,7 @@ function renderBoard() {
 
       if (!cellElement) {
         continue;
-      } // Пропускаємо, якщо елемент не знайдено
+      }
 
       cellElement.textContent = value === 0 ? '' : value;
 
@@ -122,7 +119,7 @@ function handleKeyPress(e) {
   }
 
   const key = e.key;
-  let moveMade = false; // Прапорець, щоб оновлювати UI тільки якщо був хід
+  let moveMade = false;
 
   switch (key) {
     case 'ArrowUp':
@@ -147,11 +144,11 @@ function handleKeyPress(e) {
   }
 
   if (moveMade) {
-    updateUI(); // Оновлюємо UI тільки якщо хід був успішним (щось змінилося)
+    updateUI();
   }
 }
 
 buttonElement.addEventListener('click', handleButtonClick);
 document.addEventListener('keydown', handleKeyPress);
 
-updateUI(); // Перший виклик для відображення початкового стану
+updateUI();

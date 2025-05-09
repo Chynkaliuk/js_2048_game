@@ -1,4 +1,3 @@
-// src/modules/Game.class.js
 'use strict';
 
 class Game {
@@ -13,7 +12,7 @@ class Game {
     } else {
       this.board = Array.from(
         { length: this.size },
-        () => Array(this.size).fill(0), // <---
+        () => Array(this.size).fill(0), //
       );
     }
   }
@@ -35,7 +34,7 @@ class Game {
       { length: this.size },
       () =>
         //
-        Array(this.size).fill(0), // <---
+        Array(this.size).fill(0), //
     );
     this.score = 0;
     this.status = 'playing';
@@ -48,7 +47,7 @@ class Game {
       { length: this.size },
       () =>
         //
-        Array(this.size).fill(0), // <---
+        Array(this.size).fill(0), //
     );
     this.score = 0;
     this.status = 'idle';
@@ -160,7 +159,7 @@ class Game {
       { length: this.size },
       () =>
         //
-        Array(this.size).fill(0), // <---
+        Array(this.size).fill(0), //
     );
 
     for (let r = 0; r < this.size; r++) {
